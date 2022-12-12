@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vargas Lab Activity</title>
+</head>
+<body>
+<body align="center"> 
+    <table align="center" cellpadding="15">
+        <tr><td><p><b>Year/s</b> <span id="y"></span></p></td>
+        <td><p><b> Month/s</b>  <span id="m"></span></p></td>
+        <td><p><b> Day/s</b>  <span id="d"></span></p></td>
+        <td><p><b> Hour/s</b>  <span id="h"></span></p></td>
+        <td><p><b> Minute/s</b>  <span id="m"></span></p></td>
+        <td><p><b> Second/s</b>  <span id="s"></span></p></td></tr>
+    </table>
+    <input type=" " id="TimeAndDate">
+    <script>
+    
+        var Today = new Date();
+        var D = Today.getFullYear()+'-'+(Today.getMonth()+1)+'-'+Today.getDate();
+        var T = Today.getHours() + ":" + Today.getMinutes() + ":" + Today.getSeconds();
+        
+                document.getElementById("TimeAndDate").value = D +' '+T ;
+        
+                </script>
+            <p id="Greetings"></p>
+    <script>
+        const time = new Date().getHours();
+        let Greeter;
+        if (time < 10 ) {
+            Greeter = "Hello, Good Morning!";
+        } else if (time < 20) {
+            Greeter = "Hello, Good Afternoon!";
+        } else {
+            Greeter = "Hello, Good Evening!";
+        }
+        document.getElementById("Greetings").innerHTML = Greeter;
+    </script>
+    <input id="myInput" type="text">
+
+    <button onclick="myFunction()">Look for Food</button>
+    
+    <p id="FavFood"></p>
+    
+    <script>
+    function myFunction() {
+      var food;
+      var MyFood = document.getElementById("myInput").value;
+    
+      switch(MyFood) {
+        case "Fried Chicken":
+          text = "Fried Chicken is my Favorite!";
+        break;
+        case "Adobong Atay":
+        text = "I am not a fan of Adobong Atay(Liver)";
+        break;
+        case "Tinola":
+        text = "Tinola is one of my favorite dishes, especially when it is raining.";
+        break;
+        case "Caldereta":
+          text = "Caldereta is my Favorite!";
+        break;
+        case "Spaghetti":
+          text = "Spaghetti is my Favorite!";
+        break;
+        case "Burger Steak":
+          text = "Burger Steak is my Favorite";
+        break;
+        default:
+        text = "Favourite Food not Found...";
+      }
+      document.getElementById("FavFood").innerHTML = text;
+    }
+</script>
+</body>
+</html>
